@@ -1,9 +1,7 @@
-//  interactive Game
-
-let playGame = confirm("Shall we play rock , paper, scissors.");
+let playGame = confirm("Shall we play rock, paper, scissors?");
 
 if (playGame) {
-  let playerChoice = prompt("please enter rock , paper , scissors.");
+  let playerChoice = prompt("Please enter rock, paper, or scissors.");
 
   if (playerChoice) {
     let playerOne = playerChoice.trim().toLowerCase();
@@ -11,7 +9,7 @@ if (playGame) {
     if (
       playerOne === "rock" ||
       playerOne === "paper" ||
-      PlayerOne === "scissors"
+      playerOne === "scissors"
     ) {
       let computerChoice = Math.floor(Math.random() * 3 + 1);
 
@@ -19,29 +17,30 @@ if (playGame) {
         computerChoice === 1
           ? "rock"
           : computerChoice === 2
-            ? "paper"
-            : "scissors";
+          ? "paper"
+          : "scissors";
 
       let result =
         playerOne === computer
-          ? "TieGame !"
+          ? "Tie Game!"
           : playerOne === "rock" && computer === "paper"
-            ? `playerOne : ${playerOne};\n computer : ${computer};\n Computer Wins !`
-            : playerOne === " paper" && computer === "scissors"
-              ? `playerOne : ${playerOne};\n commputer : ${computer};\n Computer Wins !`
-              : playerOne === "scissors" && computer === "rock"
-                ? `playerOne : ${playerOne};\n computer : ${computer};\n computer Wins !`
-                : `playerOne : ${playerOne};\n computer : ${computer};\n Player Wins !`;
+          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+          : playerOne === "paper" && computer === "scissors"
+          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+          : playerOne === "scissors" && computer === "rock"
+          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+          : `Player: ${playerOne}\nComputer: ${computer}\nPlayer Wins!`;
+
       alert(result);
-      let playAgain = confirm("play Again?");
-      playAgain ? location.reload() : alert("ok thanks for playing. ");
+
+      let playAgain = confirm("Play again?");
+      playAgain ? location.reload() : alert("Thanks for playing!");
     } else {
-      (alert("you dont enter rock , paper , scissors.") && location.reload()) ||
-        playAgain;
+      alert("You didn't enter rock, paper, or scissors.") && playAgain
     }
   } else {
-    (alert(" i guess you changed your mind . Maybe next time") && location.reload()) || playAgain;
+    alert("I guess you changed your mind. Maybe next time!");
   }
 } else {
-  alert("ok , maybe next time.");
+  alert("Ok, maybe next time.");
 }
