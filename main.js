@@ -23,7 +23,7 @@ if (playGame) {
       let result =
         playerOne === computer
           ? "Tie Game!"
-          : playerOne === "rock" && computer === "paper"
+          : playerOne === "rock" && computer ==="paper"
           ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
           : playerOne === "paper" && computer === "scissors"
           ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
