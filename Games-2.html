@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+               // using loops and arrays
+
+     
+     let playGame = confirm("Shall we play rock, paper, scissors?");
+
+if (!playGame) {
+  alert("Ok, maybe next time.");
+}
+
+while (playGame) {
+  const playerChoice = prompt("Please enter rock, paper, or scissors.");
+
+  if (playerChoice === null) {
+    alert("I guess you changed your mind. Maybe next time!");
+    break;
+  }
+
+  const playerOne = playerChoice.trim().toLowerCase();
+
+  if (playerOne === "rock" || playerOne === "paper" || playerOne === "scissors") {
+    const rpsArray = ["rock", "paper", "scissors"];
+    const computer = rpsArray[Math.floor(Math.random() * 3)];
+
+    const result =
+      playerOne === computer
+        ? "Tie Game!"
+        : playerOne === "rock" && computer === "paper"
+        ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+        : playerOne === "paper" && computer === "scissors"
+        ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+        : playerOne === "scissors" && computer === "rock"
+        ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+        : `Player: ${playerOne}\nComputer: ${computer}\nPlayer Wins!`;
+
+    alert(result);
+
+    playGame = confirm("Play again?");
+    if (!playGame) alert("Ok, thanks for playing.");
+  } else {
+    alert("You didn't enter rock, paper, or scissors.");
+  }
+}
+
+     
+    </script>
+  </body>
+</html>

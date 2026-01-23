@@ -17,26 +17,26 @@ if (playGame) {
         computerChoice === 1
           ? "rock"
           : computerChoice === 2
-          ? "paper"
-          : "scissors";
+            ? "paper"
+            : "scissors";
 
       let result =
         playerOne === computer
           ? "Tie Game!"
-          : playerOne === "rock" && computer ==="paper"
-          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
-          : playerOne === "paper" && computer === "scissors"
-          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
-          : playerOne === "scissors" && computer === "rock"
-          ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
-          : `Player: ${playerOne}\nComputer: ${computer}\nPlayer Wins!`;
+          : playerOne === "rock" && computer === "paper"
+            ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+            : playerOne === "paper" && computer === "scissors"
+              ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+              : playerOne === "scissors" && computer === "rock"
+                ? `Player: ${playerOne}\nComputer: ${computer}\nComputer Wins!`
+                : `Player: ${playerOne}\nComputer: ${computer}\nPlayer Wins!`;
 
       alert(result);
 
       let playAgain = confirm("Play again?");
       playAgain ? location.reload() : alert("Thanks for playing!");
     } else {
-      alert("You didn't enter rock, paper, or scissors.") && playAgain
+      alert("You didn't enter rock, paper, or scissors.") && playAgain;
     }
   } else {
     alert("I guess you changed your mind. Maybe next time!");
